@@ -1,23 +1,8 @@
-<?php
-require_once "conexion.php";
-
-
-$dni = mysqli_real_escape_string($link, $_POST['dni']);
-$pass = mysqli_real_escape_string($link, $_POST['pass']);
-$sql = "INSERT INTO SOCIO (Dni,Contrasenya) VALUES ('$dni', '$pass')";
-if(mysqli_query($link, $sql));
- 
-
-?>
-
-
-
-
 <!DOCTYPE html>
-<html lang="es">
+<html>
     <head>
     <meta charset="UTF-8">
-    <title>CONFIRMA</title>
+    <title>REGISTRATE</title>
     
         <link rel="stylesheet" href="IMAGENES/">
         <link rel="stylesheet" href="CSS/iniciosocios.css">
@@ -40,9 +25,9 @@ if(mysqli_query($link, $sql));
     
             <ul> 
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="">Socios</a></li>
+                <li><a href=""style="background:white;color:#681392;">Bienvenido socio</a></li>
                 <li><a href="">Actividades</a></li>
-                
+                <li><a href="">Buscar</a></li>
         
          </ul>
          </nav> 
@@ -50,24 +35,7 @@ if(mysqli_query($link, $sql));
 
 
 
-    <div id="formulario">
-    <form method="POST"> 
 
-    
-    <label for="">Confirma tu DNI:</label>
-    
-    <input type="text"  name="dni">
-
-    <label for="MODELO">Ingresa tu contraseña:</label>
-
-    <input type="text"  name="pass" >
-
-    <input type="submit" value="Enviar">
-
-
-
-
-    </form>
 
     </body> 
         
